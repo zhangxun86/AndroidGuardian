@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.zzsr.guardian"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -46,4 +46,11 @@ dependencies {
     implementation(libs.okhttp)
     // 日志拦截器在调试时非常有用，作为库的一部分是很好的实践
     implementation(libs.okhttp.logging.interceptor)
+
+    //京东渠道SDK
+    implementation("com.github.JAD-FE-TEAM.JADYunAndroid:jad_yun_sdk:2.6.28")
+
+    //华为渠道SDK
+    implementation("com.huawei.hms:ads-lite:13.4.78.301")
+    implementation("com.huawei.hms:ads-consent:3.4.78.301")
 }

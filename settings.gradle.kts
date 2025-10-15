@@ -9,6 +9,9 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+
+        maven { url = uri("https://developer.huawei.com/repo") }
+        maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
     }
 }
 dependencyResolutionManagement {
