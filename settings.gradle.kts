@@ -12,6 +12,8 @@ pluginManagement {
 
         maven { url = uri("https://developer.huawei.com/repo") }
         maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
+        maven { url = uri("https://repo1.maven.org/maven2/")}
+        maven { url = uri("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -22,6 +24,8 @@ dependencyResolutionManagement {
 
         maven { url = uri("https://developer.huawei.com/repo") }
         maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
+        maven { url = uri("https://repo1.maven.org/maven2/")}
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
