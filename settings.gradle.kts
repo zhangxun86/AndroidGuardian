@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven { url = uri("https://developer.huawei.com/repo") }
+        maven { url = uri("https://artifact.bytedance.com/repository/pangle") }
     }
 }
 
