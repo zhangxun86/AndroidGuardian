@@ -15,6 +15,19 @@ pluginManagement {
         maven { url = uri("https://repo1.maven.org/maven2/")}
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://mvn.sigmob.com/repository/maven-public/") }
+
+        maven {
+            url = uri("https://github.com/zhangxun86/aar-maven-repo/main/")
+            // 允许 Gradle 在没有 .pom 文件的情况下工作
+            metadataSources {
+                mavenPom()
+                artifact()
+            }
+        }
+
+        maven {
+            url = uri("https://raw.githubusercontent.com/zhangxun86/aar-maven-repo/main/")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -28,6 +41,19 @@ dependencyResolutionManagement {
         maven { url = uri("https://repo1.maven.org/maven2/")}
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://mvn.sigmob.com/repository/maven-public/") }
+
+        maven {
+            url = uri("https://github.com/zhangxun86/aar-maven-repo/main/")
+            // 允许 Gradle 在没有 .pom 文件的情况下工作
+            metadataSources {
+                mavenPom()
+                artifact()
+            }
+        }
+
+        maven {
+            url = uri("https://raw.githubusercontent.com/YourUsername/my-aar-maven-repo/main/")
+        }
     }
 }
 
