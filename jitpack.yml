@@ -1,0 +1,17 @@
+# jitpack.yml
+
+# 指定 JDK 版本为 17
+jdk:
+  - openjdk17
+
+# 告诉 JitPack 去哪里查找依赖
+repositories:
+  # 标准仓库
+  - google
+  - mavenCentral
+  # 你自己的 AAR 托管仓库
+  - url: https://raw.githubusercontent.com/zhangxun86/aar-maven-repo/main/ 
+  # 其他第三方广告 SDK 的仓库
+  - url: https://artifact.bytedance.com/repository/pangle
+  - url: https://developer.huawei.com/repo/
+  - url: https://mvn.sigmob.com/repository/maven-public/
