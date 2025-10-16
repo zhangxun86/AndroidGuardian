@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
     namespace = "com.zzsr.guardian"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -75,4 +76,17 @@ dependencies {
     api("xyz.adscope.amps:GDTSDK.unionNormal:4.642.1512")
     api("xyz.adscope.amps:kssdk-ad:4.6.30.1-publishRelease-4e360ba1fe")
     api("xyz.adscope.amps:ms-sdk:2.5.6.6_release")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.zhangxun86" // 你的 GitHub 用户名
+                artifactId = "AndroidGuardian"     // 你的仓库名
+                version = "1.0.1.1"                  // 你的下一个版本号
+            }
+        }
+    }
 }
