@@ -62,7 +62,6 @@ dependencies {
     api("xyz.adscope.amps.AMPSSDK:AMPSGMAdapter:5.1.7012.0")
     api("xyz.adscope.amps.AMPSSDK:AMPSHWAdapter:5.1.13478301.0")
     api("xyz.adscope.amps.AMPSSDK:AMPSJDAdapter:5.1.2632.0")
-    api("xyz.adscope.amps.AMPSSDK:AMPSKSAdapter:5.1.0.34")
     api("xyz.adscope.amps.AMPSSDK:AMPSKSAdapter:5.1.46301.1")
     api("xyz.adscope.amps.AMPSSDK:AMPSMSAdapter:5.1.2566.4")
     api("xyz.adscope.amps.AMPSSDK:AMPSOCTAdapter:5.1.1641.1")
