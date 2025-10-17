@@ -39,8 +39,9 @@ dependencyResolutionManagement {
             url = uri("https://maven.pkg.github.com/zhangxun86/my-public-aar-libs")
             // 加上凭证，以私有方式访问 (Kotlin DSL 语法)
             credentials {
-                username = "zhangxun86"
-                password = "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"
+                // 优先从环境变量读取（用于 JitPack），如果找不到，再从本地 gradle.properties 读取
+                username = System.getenv("GITHUB_ACTOR") ?: providers.gradleProperty("gpr.user").orNull
+                password = System.getenv("GITHUB_TOKEN") ?: providers.gradleProperty("gpr.key").orNull
             }
         }
 

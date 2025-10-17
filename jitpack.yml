@@ -1,0 +1,6 @@
+
+  jdk:
+    - openjdk17
+  env:
+    GITHUB_TOKEN: "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" // 在这里放你的新令牌
+    GITHUB_ACTOR: "zhangxun86"
