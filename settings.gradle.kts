@@ -5,8 +5,8 @@ pluginManagement {
             url = uri("https://maven.pkg.github.com/zhangxun86/my-public-aar-libs")
             // 加上凭证，以私有方式访问 (Kotlin DSL 语法)
             credentials {
-                username = providers.gradleProperty("gpr.user").orNull
-                password = providers.gradleProperty("gpr.key").orNull
+                username = "zhangxun86"
+                password = "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"
             }
         }
 
