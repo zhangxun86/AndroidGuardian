@@ -55,38 +55,33 @@ dependencies {
     implementation("com.huawei.hms:ads-lite:13.4.78.301")
     implementation("com.huawei.hms:ads-consent:3.4.78.301")
 
-    api("xyz.adscope.amps:AMPSASNPAdapter:5.1.5213.0")
-    api("xyz.adscope.amps:AMPSBDAdapter:5.1.940.0")
-    api("xyz.adscope.amps:AMPSBZAdapter:5.1.52121.0")
-    api("xyz.adscope.amps:AMPSCSJAdapter:5.1.7012.0")
-    api("xyz.adscope.amps:AMPSGDTAdapter:5.1.46421512.0")
-    api("xyz.adscope.amps:AMPSGMAdapter:5.1.7012.0")
-    api("xyz.adscope.amps:AMPSHWAdapter:5.1.13478301.0")
-    api("xyz.adscope.amps:AMPSJDAdapter:5.1.2632.0")
-    api("xyz.adscope.amps:AMPSKSAdapter:5.1.46301.1")
-    api("xyz.adscope.amps:AMPSMSAdapter:5.1.2566.4")
-    api("xyz.adscope.amps:AMPSOCTAdapter:5.1.1641.1")
-    api("xyz.adscope.amps:AMPSQMAdapter:5.1.347310439.0")
-    api("xyz.adscope.amps:AMPSSDK:5.1.0.34")
-    api("xyz.adscope.amps:AMPSSigmobAdapter:5.1.4240.0")
-    api("xyz.adscope.amps:ASNPSDK:5.2.1.3")
-    api("xyz.adscope.amps:Baidu_MobAds_SDK:release_v9.40")
-    api("xyz.adscope.amps:beizi_fusion_sdk:5.2.1.21")
-    api("xyz.adscope.amps:common:5.1.0.31")
-    api("xyz.adscope.amps:GDTSDK.unionNormal:4.642.1512")
-    api("xyz.adscope.amps:kssdk-ad:4.6.30.1-publishRelease-4e360ba1fe")
-    api("xyz.adscope.amps:ms-sdk:2.5.6.6_release")
-}
+    // --- AMPS SDKs ---
+    implementation("io.github.zhangxun86:amps-asnp-adapter:5.1.5213.0")
+    implementation("io.github.zhangxun86:amps-bd-adapter:5.1.940.0")
+    implementation("io.github.zhangxun86:amps-bz-adapter:5.1.52121.0")
+    implementation("io.github.zhangxun86:amps-csj-adapter:5.1.7012.0")
+    implementation("io.github.zhangxun86:amps-gdt-adapter:5.1.46421512.0")
+    implementation("io.github.zhangxun86:amps-gm-adapter:5.1.7012.0")
+    implementation("io.github.zhangxun86:amps-hw-adapter:5.1.13478301.0")
+    implementation("io.github.zhangxun86:amps-jd-adapter:5.1.2632.0")
+    implementation("io.github.zhangxun86:amps-ks-adapter:5.1.46301.1")
+    implementation("io.github.zhangxun86:amps-ms-adapter:5.1.2566.4")
+    implementation("io.github.zhangxun86:amps-oct-adapter:5.1.1641.1")
+    implementation("io.github.zhangxun86:amps-qm-adapter:5.1.347310439.0")
+    implementation("io.github.zhangxun86:amps-sdk:5.1.0.34")
+    implementation("io.github.zhangxun86:amps-sigmob-adapter:5.1.4240.0")
+    implementation("io.github.zhangxun86:asnp-sdk:5.2.1.3")
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.zhangxun86" // 你的 GitHub 用户名
-                artifactId = "AndroidGuardian"     // 你的仓库名
-                version = "1.0.1.1"                  // 你的下一个版本号
-            }
-        }
-    }
+// --- Third-party SDKs ---
+    implementation("io.github.zhangxun86:baidu-mobads-sdk:9.40")
+    implementation("io.github.zhangxun86:beizi-fusion-sdk:5.2.1.21")
+    implementation("io.github.zhangxun86:common:5.1.0.31")
+    implementation("io.github.zhangxun86:gdtsdk-union-normal:4.642.1512")
+    implementation("io.github.zhangxun86:kssdk-ad:4.6.30.1")
+    implementation("io.github.zhangxun86:ms-sdk:2.5.6.6_release")
+    implementation("io.github.zhangxun86:octopus-ad-sdk:1.6.4.1")
+    implementation("io.github.zhangxun86:open-ad-sdk:7.0.1.2")
+    implementation("io.github.zhangxun86:qumeng:3.473.10.439")
+    implementation("io.github.zhangxun86:wind-common:1.8.3")
+    implementation("io.github.zhangxun86:wind-sdk:4.24.0")
 }

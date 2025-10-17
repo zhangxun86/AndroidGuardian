@@ -1,15 +1,20 @@
 pluginManagement {
     repositories {
         maven {
-            url = uri("https://raw.githubusercontent.com/zhangxun86/aar-maven-repo/main/")
+            name = "GitHubPackages-zhangxun86"
+            url = uri("https://maven.pkg.github.com/zhangxun86/my-public-aar-libs")
+            // 加上凭证，以私有方式访问 (Kotlin DSL 语法)
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                password = providers.gradleProperty("gpr.key").orNull
+            }
         }
 
-        maven {
-            url = uri("https://github.com/zhangxun86/aar-maven-repo/main/")
-            // 允许 Gradle 在没有 .pom 文件的情况下工作
-            metadataSources {
-                mavenPom()
-                artifact()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
             }
         }
 
@@ -39,15 +44,20 @@ dependencyResolutionManagement {
     repositories {
 
         maven {
-            url = uri("https://raw.githubusercontent.com/zhangxun86/aar-maven-repo/main/")
+            name = "GitHubPackages-zhangxun86"
+            url = uri("https://maven.pkg.github.com/zhangxun86/my-public-aar-libs")
+            // 加上凭证，以私有方式访问 (Kotlin DSL 语法)
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                password = providers.gradleProperty("gpr.key").orNull
+            }
         }
 
-        maven {
-            url = uri("https://github.com/zhangxun86/aar-maven-repo/main/")
-            // 允许 Gradle 在没有 .pom 文件的情况下工作
-            metadataSources {
-                mavenPom()
-                artifact()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
             }
         }
 
@@ -60,7 +70,7 @@ dependencyResolutionManagement {
         maven { url = uri("https://repo1.maven.org/maven2/")}
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://mvn.sigmob.com/repository/maven-public/") }
-        
+
     }
 }
 
